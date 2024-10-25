@@ -1,6 +1,6 @@
 // src\components\ManufacturerDashboard.js
 import React from 'react';
-import Logout from './Logout';
+import Logout from '../Login/Logout';
 
 const ManufacturerDashboard = () => {
   return (

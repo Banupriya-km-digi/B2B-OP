@@ -1,6 +1,6 @@
-// src\components\DealerDashboard.js
+// src\components\Dealer\DealerDashboard.js
 import React from 'react';
-import Logout from './Logout';
+import Logout from '../Login/Logout';
 
 const DealerDashboard = () => {
   return (

@@ -1,11 +1,11 @@
 // src\routes.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import SuperAdminDashboard from './components/SuperAdminDashboard';
-import DealerDashboard from './components/DealerDashboard';
-import ManufacturerDashboard from './components/ManufacturerDashboard';
-import PrivateRoute from './components/PrivateRoute';
+import Login from './components/Login/Login';
+import SuperAdminDashboard from './components/SuperAdmin/SuperAdminDashboard';
+import DealerDashboard from './components/Dealer/DealerDashboard';
+import ManufacturerDashboard from './components/Manufacturer/ManufacturerDashboard';
+import PrivateRoute from './components/Login/PrivateRoute';
 
 const AppRoutes = () => {
   return (

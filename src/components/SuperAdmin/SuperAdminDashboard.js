@@ -1,6 +1,6 @@
 // src\components\SuperAdminDashboard.js
 import React from 'react';
-import Logout from './Logout';
+import Logout from '../Login/Logout';
 
 const SuperAdminDashboard = () => {
   return (
