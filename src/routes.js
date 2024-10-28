@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import SuperAdminDashboard from './components/SuperAdmin/SuperAdminDashboard';
 import DealerDashboard from './components/Dealer/DealerDashboard';
-import ManufacturerDashboard from './components/Manufacturer/ManufacturerDashboard';
+import ManufacturerDashboard from './components/Manufacturer/Dashboard/ManufacturerDashboard';
 import PrivateRoute from './components/Login/PrivateRoute';
-
 const AppRoutes = () => {
   return (
     <Router>
@@ -14,7 +13,7 @@ const AppRoutes = () => {
         <Route path="/login" element={<Login />} />
 
         <Route
-          path="/dashboard/super_admin"
+          path="/super_admin"
           element={
             <PrivateRoute allowedRoles={['super_admin']}>
               <SuperAdminDashboard />
@@ -22,7 +21,7 @@ const AppRoutes = () => {
           }
         />
         <Route
-          path="/dashboard/dealer"
+          path="/dealer"
           element={
             <PrivateRoute allowedRoles={['dealer_admin']}>
               <DealerDashboard />
@@ -30,13 +29,14 @@ const AppRoutes = () => {
           }
         />
         <Route
-          path="/dashboard/manufacturer"
+          path="/manufacturer/*"
           element={
             <PrivateRoute allowedRoles={['manufacturer_admin']}>
               <ManufacturerDashboard />
             </PrivateRoute>
           }
         />
+
       </Routes>
     </Router>
   );

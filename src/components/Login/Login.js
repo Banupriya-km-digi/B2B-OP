@@ -10,7 +10,8 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://192.168.1.14:8000/app/loginUser/', { email, password });
+      // const response = await axios.post('http://192.168.1.14:8000/app/loginUser/', { email, password });
+      const response = await axios.post(`${process.env.REACT_APP_IP}loginUser/`, { email, password });
       const { data } = response.data;
 
       console.log('API Response:', data); // Debugging line
@@ -26,13 +27,13 @@ const Login = () => {
         // Redirect based on role
         switch (data.role_name) {
           case 'super_admin':
-            navigate('/dashboard/super_admin');
+            navigate('/super_admin');
             break;
           case 'dealer_admin':
-            navigate('/dashboard/dealer');
+            navigate('/dealer');
             break;
           case 'manufacturer_admin':
-            navigate('/dashboard/manufacturer');
+            navigate('/manufacturer');
             break;
           default:
             alert('Role not recognized');
