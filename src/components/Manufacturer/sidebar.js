@@ -43,6 +43,21 @@ const Sidebar = () => {
                         <ListItemText primary="Products" />
                     </ListItemButton>
                 </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton> {/* Products Link */}
+                        <ListItemText primary="Dealers" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemText primary="Staffs" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemText primary="Settings" />
+                    </ListItemButton>
+                </ListItem>
             </List>
             <Divider />
             <Box sx={{ mt: 'auto', mb: 2, px: 2 }}>

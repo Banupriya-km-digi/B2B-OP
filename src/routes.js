@@ -2,8 +2,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
-import SuperAdminDashboard from './components/SuperAdmin/SuperAdminDashboard';
-import DealerDashboard from './components/Dealer/DealerDashboard';
+import SuperAdminDashboard from './components/SuperAdmin/Dashboard/SuperAdminDashboard';
+import DealerDashboard from './components/Dealer/Dashboard/DealerDashboard';
 import ManufacturerDashboard from './components/Manufacturer/Dashboard/ManufacturerDashboard';
 import PrivateRoute from './components/Login/PrivateRoute';
 const AppRoutes = () => {
