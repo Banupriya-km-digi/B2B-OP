@@ -1,24 +1,34 @@
 // src/components/Manufacturer/NotificationBar.js
 
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, IconButton } from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const NotificationBar = () => {
   return (
     <Box sx={{ 
-      backgroundColor: '#1976d2', // Change to your preferred color
+      backgroundColor: '#1976d2',
       color: 'white',
       padding: '10px 20px',
       position: 'relative',
-      zIndex: 1000, // Make sure it sits above other content
+      zIndex: 1000,
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
+      borderRadius: '3px',
+      margin:'3px'
     }}>
-
       <Typography variant="h6">B2B-OP Manufacturer</Typography>  
-      <Typography variant="h6">Notifications</Typography>
-     
+      
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <IconButton sx={{ color: 'white' }}>
+          <NotificationsIcon />
+        </IconButton>
+        <IconButton sx={{ color: 'white' }}>
+          <AccountCircleIcon />
+        </IconButton>
+      </Box>
     </Box>
   );
 };

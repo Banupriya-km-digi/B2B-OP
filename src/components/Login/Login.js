@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { TextField, Button, Box, Typography } from '@mui/material';
-
+import './Login.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -52,12 +52,12 @@ const Login = () => {
   return (
     <Box display="flex" height="100vh">
       {/* Left side */}
-      <Box flex={1} display="flex" flexDirection="column" justifyContent="center" alignItems="center" bgcolor="#f5f5f5" px={5}>
+      <Box className="login-page" flex={1} display="flex" flexDirection="column" justifyContent="center" alignItems="center"  px={5}>
         <Typography variant="h4" color="textPrimary" gutterBottom>
           B2B Ordering Platform
         </Typography>
-        <Typography variant="body1" color="textSecondary" align="center">
-          B2B Ordering Platform offers a robust solution for manufacturers, distributors, and dealers to enhance their business operations by providing a comprehensive system that facilitates easy catalog management, streamlined order processing, and efficient logistics integration. The platform ensures end-to-end visibility and smooth communication between all parties involved, driving better sales performance and operational efficiency.
+        <Typography variant="body1" color="textSecondary" padding={'20px'} align="center">
+        B2B Ordering Platform streamlines business operations for manufacturers, distributors, and dealers with easy catalog management, efficient order processing, and seamless logistics integration. It enhances visibility, communication, and performance across all parties, driving sales and operational efficiency.
         </Typography>
       </Box>
 

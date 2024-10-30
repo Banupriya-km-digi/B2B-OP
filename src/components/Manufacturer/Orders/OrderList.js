@@ -103,8 +103,8 @@ const OrderList = () => {
           <TextField
             label="Search by Order ID or Dealer Name"
             variant="outlined"
-            // value={searchTerm}
-            // onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             sx={{ mr: 2, flexGrow: 1 }} // Make the input grow to fill space
           />
           <Button 
